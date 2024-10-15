@@ -4,11 +4,6 @@ library(dplyr)
 data <- read.csv("/Users/zaid/Downloads/Mortgage_Data.csv")
 glimpse(data)
 
-geram <- data %>%
-  arrange(-savings)
-
-geram
-
 ggplot(data, aes(x = frequency, y = savings, color = scenario)) +
   geom_line(linewidth = 1.5, alpha = 0.9) +
   scale_x_continuous(name = "Frequency of Lump Sum Payments (years)") +
